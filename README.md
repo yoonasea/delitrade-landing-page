@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# 八寶軒 (De Li Trade)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page for a professional Feng Shui products and astrology services shop located in Bukit Batok, Singapore.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** — UI framework
+- **TypeScript** — type safety
+- **Vite 5** — build tool
+- **Tailwind CSS** — utility-first styling
+- **lucide-react** — icon library
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev       # development server
+npm run build     # production build
+npm run preview   # preview production build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+src/
+├── components/
+│   ├── Navigation.tsx      — fixed top nav with mobile hamburger menu
+│   ├── Hero.tsx            — hero section with name, tagline, CTAs
+│   ├── About.tsx           — about section with feature cards
+│   ├── Services.tsx        — services grid (4 service cards)
+│   ├── Testimonials.tsx    — customer reviews
+│   ├── Contact.tsx         — contact info, map, payment methods, footer
+│   ├── Section.tsx         — reusable section wrapper (id, background)
+│   ├── SectionHeader.tsx   — reusable title/subtitle/divider header
+│   └── ContactCard.tsx     — reusable contact info card (icon, label, content)
+├── animations.tsx          — scroll-triggered animation system (Anim component)
+├── App.tsx                 — root component composing all sections
+├── index.css               — base reset
+└── main.tsx                — entry point
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Animations
+
+Every section uses the `Anim` component for scroll-triggered fade/slide transitions. Seven variants are available:
+
+| Variant | Effect |
+|---|---|
+| `fadeUp` | fades in + slides up |
+| `fadeDown` | fades in + slides down |
+| `fadeLeft` | fades in + slides left |
+| `fadeRight` | fades in + slides right |
+| `scale` | fades in + scales up |
+| `rotate` | fades in + rotates in |
+| `slideUp` | fades in + slides up (subtle) |
+
+Customise timing with `delay` (seconds) and `duration` (seconds) props.
+
+## Customising Content
+
+Edit the data arrays and JSX in each component file to update text, add services, or change testimonials.
+
+## Image Assets
+
+Place images in `public/images/`:
+
+```
+public/images/
+├── services/     — service card images (fengshui.jpg, religious.png, bazi.webp, ziwei.jpg)
+├── payment/      — payment method logos (paynow.png, cdc.png)
+└── gallery/      — gallery placeholders (placeholder1-6.jpg)
+```
+
+## Deployment
+
+The project includes Firebase Hosting configuration. To deploy:
+
+```bash
+firebase login
+firebase init hosting   # point to dist/, configure as SPA
+npm run build
+firebase deploy
 ```

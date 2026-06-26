@@ -1,0 +1,18 @@
+import type { ReactNode } from 'react'
+
+interface Props {
+  id: string
+  bg?: string
+  className?: string
+  children: ReactNode
+}
+
+export default function Section({ id, bg = 'bg-white', className = '', children }: Props) {
+  return (
+    <section id={id} className={`py-20 ${bg} ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {children}
+      </div>
+    </section>
+  )
+}
