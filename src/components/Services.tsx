@@ -1,4 +1,4 @@
-import { ShoppingBag, Star, Clock, BookOpen, Gem } from 'lucide-react';
+import { ShoppingBag, Star, BookOpen, Gem } from 'lucide-react';
 import { Anim } from '../animations';
 
 const services = [
@@ -16,7 +16,7 @@ const services = [
     title: '宗教用品',
     titleEn: 'Religious Items',
     description: '精选佛教、道教等宗教用品，包括香炉、念珠、佛像等，满足您的信仰需求。',
-    descriptionEn: 'Buddhist, Taoist, and other religious items including incense burners, prayer beads, Buddha statues, and more.',
+    descriptionEn: 'Buddhist, Taoist, and other religious items including prayer beads, Buddha statues, and more.',
     color: 'gold',
     image: '/images/services/religious.png',
   },
@@ -65,7 +65,7 @@ export default function Services() {
                 <img
                   src={service.image}
                   alt={service.titleEn}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-[267px] object-cover"
                 />
                 <div className={`h-2 bg-feng-shui-${service.color}`}></div>
                 <div className="p-6">
@@ -90,23 +90,6 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Business Hours */}
-        <Anim variant="fadeUp" delay={0.3}>
-          <div className="bg-feng-shui-red rounded-2xl p-8 text-white text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Clock className="w-8 h-8 text-yellow-400" />
-            <h3 className="text-2xl font-bold">营业时间 Business Hours</h3>
-          </div>
-          <p className="text-3xl sm:text-4xl font-bold text-yellow-400 mb-2">
-            10:00 AM – 6:00 PM
-          </p>
-          <p className="text-lg text-white">
-            每日营业（包括周末及公共假期）
-          </p>
-          <p className="text-sm text-gray-200">
-            Open daily including weekends and public holidays
-          </p>
-        </div></Anim>
       </div>
     </section>
   );
