@@ -1,0 +1,191 @@
+{
+  "site": {
+    "title": "八宝轩 De Li Trade - 专业风水用品与命理咨询"
+  },
+
+  "navigation": {
+    "logo": {
+      "chinese": "八宝轩",
+      "english": "De Li Trade"
+    },
+    "links": [
+      { "label": "Home", "sectionId": "hero" },
+      { "label": "About", "sectionId": "about" },
+      { "label": "Services", "sectionId": "services" },
+      { "label": "Testimonials", "sectionId": "testimonials" },
+      { "label": "Contact", "sectionId": "contact" }
+    ]
+  },
+
+  "hero": {
+    "chineseName": "八宝轩",
+    "englishName": "De Li Trade",
+    "taglineChinese": "专业风水用品 · 宗教用品 · 命理咨询",
+    "taglineEnglish": "Professional Feng Shui Products, Religious Items & Astrology Services",
+    "ctaButtons": [
+      {
+        "text": "了解更多",
+        "textEn": "Learn More",
+        "action": "scrollToAbout",
+        "style": "primary"
+      },
+      {
+        "text": "立即咨询",
+        "textEn": "Contact Now",
+        "action": "tel:94317868",
+        "style": "outline"
+      }
+    ],
+    "backgroundStyle": "bg-gradient-to-b from-red-900 via-red-800 to-red-900 with translucent decorative circles"
+  },
+
+  "about": {
+    "sectionId": "about",
+    "headingChinese": "关于八宝轩",
+    "headingEnglish": "About De Li Trade",
+    "paragraphsChinese": [
+      "八宝轩（De Li Trade）是一家位于新加坡武吉巴督的专业风水用品店，致力于为顾客提供优质的风水用品、宗教用品及专业的命理咨询服务。",
+      "我们的使命是帮助每一位顾客通过传统的风水智慧改善生活，获得好运与平安。"
+    ],
+    "paragraphsEnglish": [
+      "We are a professional Feng Shui shop located in Bukit Batok, Singapore, dedicated to providing high-quality Feng Shui products, religious items, and professional astrology consultation services.",
+      "Our mission is to help every customer improve their lives through traditional Feng Shui wisdom, bringing good fortune and peace."
+    ],
+    "features": [
+      {
+        "titleChinese": "专业品质",
+        "titleEnglish": "Premium Quality",
+        "descriptionChinese": "精选优质风水用品，每件产品都经过精心挑选",
+        "descriptionEnglish": "Premium quality Feng Shui products, carefully selected"
+      },
+      {
+        "titleChinese": "贴心服务",
+        "titleEnglish": "Personalized Service",
+        "descriptionChinese": "专业顾问一对一服务，为您量身定制解决方案",
+        "descriptionEnglish": "Personalized service with dedicated consultants"
+      },
+      {
+        "titleChinese": "传承文化",
+        "titleEnglish": "Cultural Heritage",
+        "descriptionChinese": "传承中华传统文化，结合现代生活需求",
+        "descriptionEnglish": "Preserving Chinese traditions with modern applications"
+      }
+    ]
+  },
+
+  "services": {
+    "sectionId": "services",
+    "headingChinese": "服务项目",
+    "headingEnglish": "Our Services",
+    "items": [
+      {
+        "id": "fengshui",
+        "image": "fengshui.jpg",
+        "titleChinese": "风水用品",
+        "titleEnglish": "Feng Shui Products",
+        "descriptionChinese": "提供各类专业风水用品，包括水晶、摆件、吉祥物等，助您改善居家及办公环境的气场。",
+        "descriptionEnglish": "Professional Feng Shui products including crystals, ornaments, and auspicious items to improve your living and working spaces."
+      },
+      {
+        "id": "religious",
+        "image": "religious.png",
+        "titleChinese": "宗教用品",
+        "titleEnglish": "Religious Items",
+        "descriptionChinese": "精选佛教、道教等宗教用品，包括香炉、念珠、佛像等，满足您的信仰需求。",
+        "descriptionEnglish": "Buddhist, Taoist, and other religious items including incense burners, prayer beads, Buddha statues, and more."
+      },
+      {
+        "id": "bazi",
+        "image": "bazi.webp",
+        "titleChinese": "八字算命",
+        "titleEnglish": "Bazi Reading",
+        "descriptionChinese": "专业八字命理分析，解读您的命运走向、事业财运、婚姻感情等人生重要方面。",
+        "descriptionEnglish": "Professional Bazi (Eight Characters) destiny analysis for career, wealth, relationships, and life direction."
+      },
+      {
+        "id": "ziwei",
+        "image": "ziwei.jpg",
+        "titleChinese": "紫微斗数",
+        "titleEnglish": "Zi Wei Dou Shu",
+        "descriptionChinese": "紫微斗数命盘解析，深入了解您的性格特质、运势起伏、吉凶祸福。",
+        "descriptionEnglish": "Zi Wei Dou Shu (Purple Star Astrology) chart interpretation to understand your personality, fortune cycles, and destiny."
+      }
+    ]
+  },
+
+  "businessHours": {
+    "hours": "10:00 AM – 6:00 PM",
+    "noteChinese": "每日营业（包括周末及公共假期）",
+    "noteEnglish": "Open daily including weekends and public holidays"
+  },
+
+  "testimonials": {
+    "sectionId": "testimonials",
+    "headingChinese": "客户评价",
+    "headingEnglish": "Customer Reviews",
+    "items": [
+      {
+        "name": "Helen",
+        "rating": 5,
+        "reviewChinese": "八宝轩的产品质量很好，老板也很专业。购买了风水摆件后，家里的运势确实有所改善！",
+        "reviewEnglish": "Great quality products and very professional service. After buying Feng Shui items, my home energy has improved significantly!"
+      },
+      {
+        "name": "Chris",
+        "rating": 5,
+        "reviewChinese": "来这里算八字非常准确！师傅分析得很透彻，给了我很多有用的建议。强烈推荐！",
+        "reviewEnglish": "The Bazi reading was incredibly accurate! The master provided thorough analysis and very helpful advice. Highly recommended!"
+      }
+    ]
+  },
+
+  "contact": {
+    "sectionId": "contact",
+    "headingChinese": "联系我们",
+    "headingEnglish": "Contact Us",
+    "address": {
+      "labelChinese": "地址",
+      "labelEnglish": "Address",
+      "lines": ["154 Bukit Batok Street 11", "#01-304 Block 154", "Singapore 650154"]
+    },
+    "phone": {
+      "labelChinese": "电话",
+      "labelEnglish": "Phone",
+      "number": "9431 7868",
+      "tel": "94317868"
+    },
+    "businessHours": {
+      "labelChinese": "营业时间",
+      "labelEnglish": "Business Hours",
+      "hours": "每日 10:00 AM – 6:00 PM",
+      "note": "Open daily including weekends & public holidays"
+    },
+    "location": {
+      "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5640.893067207722!2d103.74205743764452!3d1.3482480177140215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da114fdcd7b267%3A0xd389408fda2d4d28!2sDe%20Li%20Trade!5e0!3m2!1sen!2ssg!4v1770095891474!5m2!1sen!2ssg",
+      "googleMapsDirectionsUrl": "https://maps.app.goo.gl/zK1YFRPAgRq13vPR8",
+      "getDirectionsText": "获取路线 Get Directions"
+    },
+    "paymentMethods": {
+      "label": "Accepted Payment Methods",
+      "items": [
+        { "name": "PayNow", "image": "paynow.png" },
+        { "name": "CDC Vouchers", "image": "cdc.png" }
+      ]
+    }
+  },
+
+  "footer": {
+    "chineseName": "八宝轩",
+    "englishName": "De Li Trade",
+    "copyright": "© 2024 De Li Trade. All rights reserved."
+  },
+
+  "images": [
+    { "file": "fengshui.jpg", "path": "/images/services/fengshui.jpg", "usage": "Feng Shui Products service card image" },
+    { "file": "religious.png", "path": "/images/services/religious.png", "usage": "Religious Items service card image" },
+    { "file": "bazi.webp", "path": "/images/services/bazi.webp", "usage": "Bazi Reading service card image" },
+    { "file": "ziwei.jpg", "path": "/images/services/ziwei.jpg", "usage": "Zi Wei Dou Shu service card image" },
+    { "file": "paynow.png", "path": "/images/payment/paynow.png", "usage": "PayNow payment method logo" },
+    { "file": "cdc.png", "path": "/images/payment/cdc.png", "usage": "CDC Vouchers payment method logo" }
+  ]
+}
