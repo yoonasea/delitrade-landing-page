@@ -1,4 +1,5 @@
 import { ShoppingBag, Star, Clock, BookOpen, Gem } from 'lucide-react';
+import { Anim } from '../animations';
 
 const services = [
   {
@@ -44,52 +45,54 @@ export default function Services() {
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-feng-shui-red mb-4">
-            服务项目
-          </h2>
-          <p className="text-xl text-feng-shui-gold font-semibold">
-            Our Services
-          </p>
-          <div className="w-24 h-1 bg-feng-shui-gold mx-auto mt-6"></div>
-        </div>
+        <Anim variant="scale">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-feng-shui-red mb-4">
+              服务项目
+            </h2>
+            <p className="text-xl text-feng-shui-gold font-semibold">
+              Our Services
+            </p>
+            <div className="w-24 h-1 bg-feng-shui-gold mx-auto mt-6"></div>
+          </div>
+        </Anim>
 
         {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all transform hover:-translate-y-2"
-            >
-              <img
-                src={service.image}
-                alt={service.titleEn}
-                className="w-full h-48 object-cover"
-              />
-              <div className={`h-2 bg-feng-shui-${service.color}`}></div>
-              <div className="p-6">
-                <div className={`p-3 bg-feng-shui-${service.color} rounded-full w-fit mb-4`}>
-                  <service.icon className="w-6 h-6 text-white" />
+            <Anim key={index} variant="fadeUp" delay={index * 0.1}>
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all transform hover:-translate-y-2">
+                <img
+                  src={service.image}
+                  alt={service.titleEn}
+                  className="w-full h-48 object-cover"
+                />
+                <div className={`h-2 bg-feng-shui-${service.color}`}></div>
+                <div className="p-6">
+                  <div className={`p-3 bg-feng-shui-${service.color} rounded-full w-fit mb-4`}>
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-1">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-feng-shui-gold font-medium mb-3">
+                    {service.titleEn}
+                  </p>
+                  <p className="text-gray-600 text-sm mb-2">
+                    {service.description}
+                  </p>
+                  <p className="text-gray-500 text-xs">
+                    {service.descriptionEn}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-1">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-feng-shui-gold font-medium mb-3">
-                  {service.titleEn}
-                </p>
-                <p className="text-gray-600 text-sm mb-2">
-                  {service.description}
-                </p>
-                <p className="text-gray-500 text-xs">
-                  {service.descriptionEn}
-                </p>
               </div>
-            </div>
+            </Anim>
           ))}
         </div>
 
         {/* Business Hours */}
-        <div className="bg-feng-shui-red rounded-2xl p-8 text-white text-center">
+        <Anim variant="fadeUp" delay={0.3}>
+          <div className="bg-feng-shui-red rounded-2xl p-8 text-white text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Clock className="w-8 h-8 text-yellow-400" />
             <h3 className="text-2xl font-bold">营业时间 Business Hours</h3>
@@ -103,7 +106,7 @@ export default function Services() {
           <p className="text-sm text-gray-200">
             Open daily including weekends and public holidays
           </p>
-        </div>
+        </div></Anim>
       </div>
     </section>
   );

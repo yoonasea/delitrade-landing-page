@@ -1,10 +1,11 @@
 import { Star, Quote } from 'lucide-react';
+import { Anim } from '../animations';
 
 const testimonials = [
   {
     name: 'Helen',
     rating: 5,
-    review: '八宝轩的产品质量很好，老板也很专业。购买了风水摆件后，家里的运势确实有所改善！',
+    review: '八寶軒的产品质量很好，老板也很专业。购买了风水摆件后，家里的运势确实有所改善！',
     reviewEn: 'Great quality products and very professional service. After buying Feng Shui items, my home energy has improved significantly!',
   },
   {
@@ -20,23 +21,25 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-feng-shui-red mb-4">
-            客户评价
-          </h2>
-          <p className="text-xl text-feng-shui-gold font-semibold">
-            Customer Reviews
-          </p>
-          <div className="w-24 h-1 bg-feng-shui-gold mx-auto mt-6"></div>
-        </div>
+        <Anim variant="fadeDown">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-feng-shui-red mb-4">
+              客户评价
+            </h2>
+            <p className="text-xl text-feng-shui-gold font-semibold">
+              Customer Reviews
+            </p>
+            <div className="w-24 h-1 bg-feng-shui-gold mx-auto mt-6"></div>
+          </div>
+        </Anim>
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-2xl p-8 shadow-lg border border-red-100"
-            >
+            <Anim key={index} variant={index === 0 ? 'fadeLeft' : 'fadeRight'} delay={index * 0.15}>
+              <div 
+                className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-2xl p-8 shadow-lg border border-red-100"
+              >
               {/* Quote Icon */}
               <div className="mb-4">
                 <Quote className="w-10 h-10 text-feng-shui-gold opacity-50" />
@@ -67,7 +70,7 @@ export default function Testimonials() {
                   <p className="text-sm text-gray-500">Verified Customer</p>
                 </div>
               </div>
-            </div>
+            </div></Anim>
           ))}
         </div>
       </div>

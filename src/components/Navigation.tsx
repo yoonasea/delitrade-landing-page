@@ -19,7 +19,7 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-xl sm:text-2xl font-bold text-feng-shui-red">
-              <span className="mr-2">八宝轩</span>
+              <span className="mr-2">八寶軒</span>
               <span className="text-feng-shui-gold">De Li Trade</span>
             </h1>
           </div>

@@ -1,11 +1,11 @@
 {
   "site": {
-    "title": "八宝轩 De Li Trade - 专业风水用品与命理咨询"
+    "title": "八寶軒 De Li Trade - 专业风水用品与命理咨询"
   },
 
   "navigation": {
     "logo": {
-      "chinese": "八宝轩",
+      "chinese": "八寶軒",
       "english": "De Li Trade"
     },
     "links": [
@@ -18,7 +18,7 @@
   },
 
   "hero": {
-    "chineseName": "八宝轩",
+    "chineseName": "八寶軒",
     "englishName": "De Li Trade",
     "taglineChinese": "专业风水用品 · 宗教用品 · 命理咨询",
     "taglineEnglish": "Professional Feng Shui Products, Religious Items & Astrology Services",
@@ -41,10 +41,10 @@
 
   "about": {
     "sectionId": "about",
-    "headingChinese": "关于八宝轩",
+    "headingChinese": "关于八寶軒",
     "headingEnglish": "About De Li Trade",
     "paragraphsChinese": [
-      "八宝轩（De Li Trade）是一家位于新加坡武吉巴督的专业风水用品店，致力于为顾客提供优质的风水用品、宗教用品及专业的命理咨询服务。",
+      "八寶軒（De Li Trade）是一家位于新加坡武吉巴督的专业风水用品店，致力于为顾客提供优质的风水用品、宗教用品及专业的命理咨询服务。",
       "我们的使命是帮助每一位顾客通过传统的风水智慧改善生活，获得好运与平安。"
     ],
     "paragraphsEnglish": [
@@ -127,7 +127,7 @@
       {
         "name": "Helen",
         "rating": 5,
-        "reviewChinese": "八宝轩的产品质量很好，老板也很专业。购买了风水摆件后，家里的运势确实有所改善！",
+        "reviewChinese": "八寶軒的产品质量很好，老板也很专业。购买了风水摆件后，家里的运势确实有所改善！",
         "reviewEnglish": "Great quality products and very professional service. After buying Feng Shui items, my home energy has improved significantly!"
       },
       {
@@ -175,7 +175,7 @@
   },
 
   "footer": {
-    "chineseName": "八宝轩",
+    "chineseName": "八寶軒",
     "englishName": "De Li Trade",
     "copyright": "© 2024 De Li Trade. All rights reserved."
   },

@@ -1,25 +1,29 @@
 import { MapPin, Phone, Clock, Navigation2 } from 'lucide-react';
+import { Anim } from '../animations';
 
 export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4">
-            联系我们
-          </h2>
-          <p className="text-xl text-gray-300 font-semibold">
-            Contact Us
-          </p>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mt-6"></div>
-        </div>
+        <Anim variant="scale">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4">
+              联系我们
+            </h2>
+            <p className="text-xl text-gray-300 font-semibold">
+              Contact Us
+            </p>
+            <div className="w-24 h-1 bg-yellow-400 mx-auto mt-6"></div>
+          </div>
+        </Anim>
 
         {/* Contact Grid */}
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-gray-800 rounded-xl p-6">
+            <Anim variant="fadeLeft" delay={0.1}>
+              <div className="bg-gray-800 rounded-xl p-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-yellow-500 rounded-full">
                   <MapPin className="w-6 h-6 text-gray-900" />
@@ -35,49 +39,54 @@ export default function Contact() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div></Anim>
 
-            <div className="bg-gray-800 rounded-xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-yellow-500 rounded-full">
-                  <Phone className="w-6 h-6 text-gray-900" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-yellow-400 mb-2">
-                    电话 Phone
-                  </h3>
-                  <a 
-                    href="tel:94317868" 
-                    className="text-gray-300 hover:text-yellow-400 transition-colors text-2xl font-bold"
-                  >
-                    9431 7868
-                  </a>
+            <Anim variant="fadeRight" delay={0.2}>
+              <div className="bg-gray-800 rounded-xl p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-yellow-500 rounded-full">
+                    <Phone className="w-6 h-6 text-gray-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-yellow-400 mb-2">
+                      电话 Phone
+                    </h3>
+                    <a 
+                      href="tel:94317868" 
+                      className="text-gray-300 hover:text-yellow-400 transition-colors text-2xl font-bold"
+                    >
+                      9431 7868
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Anim>
 
-            <div className="bg-gray-800 rounded-xl p-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-yellow-500 rounded-full">
-                  <Clock className="w-6 h-6 text-gray-900" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-yellow-400 mb-2">
-                    营业时间 Business Hours
-                  </h3>
-                  <p className="text-gray-300 text-lg">
-                    每日 10:00 AM – 6:00 PM
-                  </p>
-                  <p className="text-gray-500 text-sm">
-                    Open daily including weekends & public holidays
-                  </p>
+            <Anim variant="fadeRight" delay={0.3}>
+              <div className="bg-gray-800 rounded-xl p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-yellow-500 rounded-full">
+                    <Clock className="w-6 h-6 text-gray-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-yellow-400 mb-2">
+                      营业时间 Business Hours
+                    </h3>
+                    <p className="text-gray-300 text-lg">
+                      每日 10:00 AM – 6:00 PM
+                    </p>
+                    <p className="text-gray-500 text-sm">
+                      Open daily including weekends & public holidays
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Anim>
           </div>
 
           {/* Map Placeholder / Directions */}
-          <div className="bg-gray-800 rounded-xl p-6">
+          <Anim variant="slideUp" delay={0.15}>
+            <div className="bg-gray-800 rounded-xl p-6">
             <h3 className="text-xl font-bold text-yellow-400 mb-4">
               位置 Location
             </h3>
@@ -98,32 +107,34 @@ export default function Contact() {
               <Navigation2 className="w-5 h-5" />
               获取路线 Get Directions
             </a>
-          </div>
+          </div></Anim>
         </div>
 
         {/* Payment Methods */}
-        <div className="mt-12 text-center">
-          <h3 className="text-lg font-bold text-yellow-400 mb-4">
-            Accepted Payment Methods
-          </h3>
-          <div className="flex items-center justify-center gap-6 flex-wrap">
-            <img
-              src="/images/payment/paynow.png"
-              alt="PayNow"
-              className="h-20 object-contain"
-            />
-            <img
-              src="/images/payment/cdc.png"
-              alt="CDC Vouchers"
-              className="h-20 object-contain"
-            />
+        <Anim variant="fadeUp" delay={0.25}>
+          <div className="mt-12 text-center">
+            <h3 className="text-lg font-bold text-yellow-400 mb-4">
+              Accepted Payment Methods
+            </h3>
+            <div className="flex items-center justify-center gap-6 flex-wrap">
+              <img
+                src="/images/payment/paynow.png"
+                alt="PayNow"
+                className="h-20 object-contain"
+              />
+              <img
+                src="/images/payment/cdc.png"
+                alt="CDC Vouchers"
+                className="h-20 object-contain"
+              />
+            </div>
           </div>
-        </div>
+        </Anim>
 
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-gray-700 text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
-            <span className="text-2xl font-bold text-yellow-400">八宝轩</span>
+            <span className="text-2xl font-bold text-yellow-400">八寶軒</span>
             <span className="text-gray-400">|</span>
             <span className="text-xl text-gray-300">De Li Trade</span>
           </div>

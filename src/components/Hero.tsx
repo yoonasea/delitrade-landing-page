@@ -1,4 +1,5 @@
 import { ChevronDown, Sparkles } from 'lucide-react';
+import { Anim } from '../animations';
 
 export default function Hero() {
   const scrollToAbout = () => {
@@ -20,45 +21,49 @@ export default function Hero() {
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        {/* Decorative stars */}
-        <div className="flex justify-center mb-6">
-          <Sparkles className="text-yellow-400 w-8 h-8 animate-pulse" />
-        </div>
-        
-        {/* Chinese Name */}
-        <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-yellow-400 mb-4 text-shadow-lg tracking-wider">
-          八宝轩
-        </h1>
-        
-        {/* English Name */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-6 text-shadow">
-          De Li Trade
-        </h2>
-        
-        {/* Tagline */}
-        <p className="text-xl sm:text-2xl text-yellow-200 mb-4 text-shadow">
-          专业风水用品 · 宗教用品 · 命理咨询
-        </p>
-        <p className="text-lg text-gray-300 mb-12">
-          Professional Feng Shui Products, Religious Items & Astrology Services
-        </p>
+        <Anim variant="fadeDown">
+          {/* Decorative stars */}
+          <div className="flex justify-center mb-6">
+            <Sparkles className="text-yellow-400 w-8 h-8 animate-pulse" />
+          </div>
+          
+          {/* Chinese Name */}
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-yellow-400 mb-4 text-shadow-lg tracking-wider">
+            八寶軒
+          </h1>
+          
+          {/* English Name */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-6 text-shadow">
+            De Li Trade
+          </h2>
+          
+          {/* Tagline */}
+          <p className="text-xl sm:text-2xl text-yellow-200 mb-4 text-shadow">
+            专业风水用品 · 宗教用品 · 命理咨询
+          </p>
+          <p className="text-lg text-gray-300 mb-12">
+            Professional Feng Shui Products, Religious Items & Astrology Services
+          </p>
+        </Anim>
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button
-            onClick={scrollToAbout}
-            className="px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-red-900 font-bold rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
-          >
-            <span>了解更多</span>
-            <ChevronDown className="w-5 h-5" />
-          </button>
-          <a
-            href="tel:94317868"
-            className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-red-900 font-bold rounded-full transition-all transform hover:scale-105 flex items-center gap-2"
-          >
-            <span>立即咨询</span>
-          </a>
-        </div>
+        <Anim variant="fadeUp" delay={0.3}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+              onClick={scrollToAbout}
+              className="px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-red-900 font-bold rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2"
+            >
+              <span>了解更多</span>
+              <ChevronDown className="w-5 h-5" />
+            </button>
+            <a
+              href="tel:94317868"
+              className="px-8 py-4 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-red-900 font-bold rounded-full transition-all transform hover:scale-105 flex items-center gap-2"
+            >
+              <span>立即咨询</span>
+            </a>
+          </div>
+        </Anim>
       </div>
 
       {/* Scroll Indicator */}
