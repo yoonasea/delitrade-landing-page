@@ -11,13 +11,6 @@ export default function Hero() {
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white">
-      {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 border-4 border-red-400 rounded-full"></div>
-        <div className="absolute top-20 right-20 w-24 h-24 border-4 border-red-400 rounded-full"></div>
-        <div className="absolute bottom-32 left-20 w-16 h-16 border-4 border-red-400 rounded-full"></div>
-        <div className="absolute bottom-20 right-32 w-20 h-20 border-4 border-red-400 rounded-full"></div>
-      </div>
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
